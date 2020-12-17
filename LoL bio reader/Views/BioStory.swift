@@ -29,16 +29,18 @@ struct BioStory: View {
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                         .padding([.top, .leading, .trailing])
-                    Text("──────────")
+                        .padding(.bottom, -height * 0.005)
+                    Image("line")
+                        .resizable()
+                        .scaledToFit()
                     Text(bio.content)
                         .font(.headline)
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
-                        .padding(.horizontal, 30)
+                        .padding(.horizontal, width * 0.1)
                     }
                 }
         }
-//        .navigationBarTitle(Text("\(bio.title)"), displayMode: .inline)
         .navigationBarTitle(bio.title)
     }
 }

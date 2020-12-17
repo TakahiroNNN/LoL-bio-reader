@@ -30,12 +30,12 @@ struct RegionView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .scaledToFit()
-                    .frame(width: 80, height: 80)
+                    .frame(width: width/5, height: width/5)
                 Text(region.name)
                     .font(.body)
                     .foregroundColor(.white)
             }
-            .padding(.leading, 30)
+            .padding(.leading, width/12)
             Spacer()
         }
     }

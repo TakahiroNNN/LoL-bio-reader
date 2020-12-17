@@ -18,23 +18,16 @@ struct RegionDetail: View {
                 RegionView(region: region)
                 
                 if region.content != ""{
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(height: 5)
                     Text(region.content)
                         .font(.headline)
                         .fontWeight(.regular)
-                        .padding(.horizontal, 30)
+                        .padding(.vertical)
+                        .padding(.horizontal, width/12)
                 }
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(height: 5)
                 ChampionRow(champions: champions.filter{
                         $0.region == region.name
                 }, bios: dataStore.bios)
             }
-//            BioRow(bios: bios)
-//            Spacer()
         }
         .navigationBarTitle(Text("\(region.name)"), displayMode: .inline)
     }

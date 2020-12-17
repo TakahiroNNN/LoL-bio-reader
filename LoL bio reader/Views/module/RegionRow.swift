@@ -19,8 +19,8 @@ struct RegionRow: View {
             //テキスト（サブタイトル）
             Text("地域")
                 .font(.headline)
-                .padding(.leading, 15)
-                .padding(.top, 5)
+                .padding(.leading, width/25)
+                .padding(.top, height/100)
             //地域画像のスクロールをhorizon方向に許可
             ScrollView(.horizontal, showsIndicators: true) {
                 //horizontal方向に並べて配置
@@ -29,14 +29,12 @@ struct RegionRow: View {
                     ForEach(self.regions) {
                         //NavigationLinkに変数代入、リンク先はChampionView（champion仮引数にchampion変数代入）
                         region in NavigationLink(destination: RegionDetail(region: region, champions: champions)){
-                        //ボタンのラベルはchampionCellを使用(champion仮引数にchampion変数代入)
-                        //このViewの定義は上記
-                        RegionCell(region: region)
+                            RegionCell(region: region)
                         }
                         .padding(.bottom)
                     }
                 }
-            }.padding(.top, -5)
+            }.padding(.top, -height/100)
         }
     }
 }

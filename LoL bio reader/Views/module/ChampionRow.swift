@@ -19,8 +19,8 @@ struct ChampionRow: View {
             //テキスト（サブタイトル）
             Text("チャンピオン")
                 .font(.headline)
-                .padding(.leading, 15)
-                .padding(.top, 5)
+                .padding(.leading, width/25)
+                .padding(.top, height/100)
             //チャンピオン画像のスクロールをhorizon方向に許可
             ScrollView(.horizontal, showsIndicators: false) {
                 //horizontal方向に並べて配置
@@ -35,7 +35,7 @@ struct ChampionRow: View {
                         }
                     }
                 }
-            }.padding(.top, -5)
+            }.padding(.top, -height/100)
         }
     }
 }

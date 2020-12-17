@@ -9,36 +9,44 @@
 import Foundation
 import SwiftUI
 
-struct ChampionFrame: Shape {
-    
-    func path(in rect: CGRect) -> Path {
-        
-        let points = [
-            CGPoint(x: rect.width * 0.3, y: rect.width * 0),
-            CGPoint(x: rect.width * 0.7, y: rect.width * 0),
-            CGPoint(x: rect.width * 1, y: rect.width * 0.3),
-            CGPoint(x: rect.width * 1, y: rect.width * 0.7),
-            CGPoint(x: rect.width * 0.7, y: rect.width * 1),
-            CGPoint(x: rect.width * 0.3, y: rect.width * 1),
-            CGPoint(x: rect.width * 0, y: rect.width * 0.7),
-            CGPoint(x: rect.width * 0, y: rect.width * 0.3),
-        ]
-        
-        return Path { path in
-            path.addLines(points)
-            path.closeSubpath()
-        }
-    }
-}
-
 struct ShapeCheck: View {
     var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/){
             Text("練習シェイプ")
-            ChampionFrame()
-                .fill(Color.yellow)
-                .cornerRadius(10)
-            
+            ZStack(alignment: .center){
+                Image("aatrox")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: width * 0.3, height: width * 0.3)
+//                    .clipShape(Circle())
+                    .clipShape(ChampionClip(0.3))
+                    .overlay(
+                        ChampionClip(0.3)
+                            .stroke(style: .init(lineWidth: 0.5))
+                            .fill(Color.yellow)
+                    )
+                    .overlay(
+                        Circle()
+                            .stroke(style: .init(lineWidth: 0.1))
+                            .fill(Color.yellow)
+                            .frame(width: width * 0.35, height: width * 0.35)
+                    )
+                    .overlay(
+                        ChampionFrameBottomLarge(0.3)
+                            .stroke(style: .init(lineWidth: 0.1))
+                            .fill(Color.yellow)
+                    )
+                    .overlay(
+                        ChampionFrameBottomSmall(0.3)
+                            .stroke(style: .init(lineWidth: 0.1))
+                            .fill(Color.yellow)
+                    )
+                    .overlay(
+                        ChampionFrameTop(0.3)
+                            .stroke(style: .init(lineWidth: 0.1))
+                            .fill(Color.yellow)
+                    )
+            }
         }
     }
 }

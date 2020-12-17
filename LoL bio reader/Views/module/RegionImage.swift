@@ -8,11 +8,6 @@
 
 import SwiftUI
 
-fileprivate let gradient = Gradient(colors: [.white,
-    Color.init(red: 0.9, green: 0.9, blue: 0.9)])
-
-fileprivate let linear = LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
-
 struct RegionImage: View {
     let icon: Image
     let image: Image
@@ -21,16 +16,19 @@ struct RegionImage: View {
         ZStack{
             image
                 .resizable()
-                .cornerRadius(10)
-                .frame(width: 350, height: 200)
+                .frame(width: width * 0.9, height: height * 0.3)
             Color.black.opacity(0.4)
-                .cornerRadius(10)
-                .frame(width: 350, height: 200)
+                .frame(width: width * 0.9, height: height * 0.3)
+                .overlay(
+                    RegionFrame()
+                        .stroke(style: .init(lineWidth: 0.5))
+                        .fill(Color.yellow)
+                )
             icon
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .scaledToFit()
-                .frame(width: 100, height: 100)
+                .frame(width: height * 0.15, height: height * 0.15)
         }
     }
 }
@@ -42,6 +40,5 @@ struct RegionImage_Previews: PreviewProvider {
                 region in RegionImage(icon: region.icon, image: region.image)
             }
         }
-        .previewLayout(.fixed(width: 450, height: 300))
     }
 }

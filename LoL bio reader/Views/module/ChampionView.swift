@@ -29,12 +29,12 @@ struct ChampionView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .scaledToFit()
-                    .frame(width: 80, height: 80)
+                    .frame(width: width/5, height: width/5)
                 Text(champion.region)
                     .font(.body)
                     .foregroundColor(.white)
             }
-            .padding(.leading, 30)
+            .padding(.leading, width/12)
             Spacer()
         }
     }
@@ -42,9 +42,7 @@ struct ChampionView: View {
 
 struct ChampionView_Previews: PreviewProvider {
     static var previews: some View {
-        Group{
-            ForEach(dataStore.champions){champion in ChampionView(champion: champion)}
-        }
+        Group{ ChampionView(champion: dataStore.champions[0])}
 //        .previewLayout(.fixed(width: 300, height: 300))
     }
 }

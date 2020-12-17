@@ -10,7 +10,7 @@ import SwiftUI
 
 
 
-struct FirstView: View {
+struct FirstViewHome: View {
     @State var showingModal = true
     
     var body: some View {
@@ -34,7 +34,7 @@ struct FirstView: View {
                                 Text("──────────")
                                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
 //                                    .padding()
-                                Text("LoL Bio Reader  は、ライアットゲームズが公式承認するものではなく、ライアットゲームズ又はリーグ・オブ・レジェンドの製作・管理に正式に関与したいかなる者の見解・意見に基づくものではありません。リーグ・オブ・レジェンド及びライアットゲームズは、Riot Games, Inc.の商標又は登録商標です。リーグ・オブ・レジェンド © Riot Games, Inc.")
+                                Text("LoL Champions' Lore  は、ライアットゲームズが公式承認するものではなく、ライアットゲームズ又はリーグ・オブ・レジェンドの製作・管理に正式に関与したいかなる者の見解・意見に基づくものではありません。リーグ・オブ・レジェンド及びライアットゲームズは、Riot Games, Inc.の商標又は登録商標です。リーグ・オブ・レジェンド © Riot Games, Inc.")
                                     .font(.headline)
                                     .padding(.horizontal)
 //                                    .padding()
@@ -57,16 +57,63 @@ struct FirstView: View {
     }
 }
 
+struct FirstViewSearch: View {
+    @State var showingModal = true
+    
+    var body: some View {
+        VStack{
+            if showingModal{
+                ZStack{
+                    SearchView()
+                    VStack{
+                        ZStack{
+                            Rectangle()
+                                .frame(width: width, height: height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(.black)
+                                .opacity(0.85)
+                            VStack{
+                                Text("Legal Jibber Jabber \nポリシー")
+                    //                .font(.system(size: 30))
+                                    .font(.largeTitle)
+                                    .fontWeight(.bold)
+                                    .multilineTextAlignment(.center)
+//                                    .padding()
+                                Text("──────────")
+                                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+//                                    .padding()
+                                Text("LoL Champions' Lore  は、ライアットゲームズが公式承認するものではなく、ライアットゲームズ又はリーグ・オブ・レジェンドの製作・管理に正式に関与したいかなる者の見解・意見に基づくものではありません。リーグ・オブ・レジェンド及びライアットゲームズは、Riot Games, Inc.の商標又は登録商標です。リーグ・オブ・レジェンド © Riot Games, Inc.")
+                                    .font(.headline)
+                                    .padding(.horizontal)
+//                                    .padding()
+                                Button(action: {self.showingModal.toggle()}) {
+                                    Text("理解しました")
+                                        .font(.title)
+                                        .fontWeight(.bold)
+                                        .padding()
+                                }.padding()
+                            }
+                        }
+                    }
+                }
+                Spacer()
+            }else{
+                SearchView()
+                Spacer()
+            }
+        }
+    }
+}
+
 struct ContentView : View {
     
     var body: some View {
         TabView{
-            FirstView()
+            FirstViewHome()
                 .tabItem{
                     Image(systemName: "house.fill")
                     Text("HOME")
                 }.tag(1)
-            SearchView()
+            FirstViewSearch()
                 .tabItem{
                     Image(systemName: "magnifyingglass")
                     Text("SEARCH")

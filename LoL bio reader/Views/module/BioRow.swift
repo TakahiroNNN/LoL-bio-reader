@@ -19,8 +19,8 @@ struct BioRow: View {
             //テキスト（サブタイトル）
             Text("物語")
                 .font(.title)
-                .padding(.leading, 30)
-                .padding(.top, 5)
+                .padding(.leading, width/25)
+                .padding(.top, height/100)
             //horizontal方向に並べて配置
             VStack(alignment: .leading, spacing: 0) {
                 //自構造体の複数変数championsをひとつずつ使用して繰り返し

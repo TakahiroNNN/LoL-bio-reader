@@ -16,10 +16,11 @@ struct RegionCell: View{
         //vertical方向に並べて配置
         VStack(alignment: .center){
             RegionImage(icon: region.icon, image: region.image)
+                .padding(.top, height * 0.01)
             Text(region.name)
                 .font(.caption)
                 .foregroundColor(.primary)
         }
-        .padding(.leading, 15)
+        .padding(.leading)
     }
 }
