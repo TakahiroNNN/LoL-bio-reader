@@ -48,10 +48,10 @@ struct FirstViewHome: View {
                         }
                     }
                 }
-                Spacer()
+//                Spacer()
             }else{
                 HomeView()
-                Spacer()
+//                Spacer()
             }
         }
     }

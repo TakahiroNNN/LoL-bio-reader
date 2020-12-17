@@ -32,17 +32,17 @@ struct HomeView: View {
             VStack{
                 Rectangle()
                     .foregroundColor(.clear)
-                    .frame(height: 15)
+                    .frame(height: height/60)
                 RegionRow(regions: dataStore.regions, champions: dataStore.champions)
                 Rectangle()
                     .foregroundColor(.clear)
-                    .frame(height: 30)
+                    .frame(height: height/30)
                 ChampionRow(
                     champions: dataStore.champions.filter() { hotIds.contains($0.id) } ,
                     bios: dataStore.bios
                 )
             }
-        .navigationBarTitle(Text("LoL Bio Reader"), displayMode: .inline)
+        .navigationBarTitle(Text("LoL Champions' Lore"), displayMode: .inline)
         }
     }
 }

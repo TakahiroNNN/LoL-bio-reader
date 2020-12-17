@@ -20,6 +20,7 @@
 		6B47D22625023AE000BFC659 /* ChampionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B47D22525023AE000BFC659 /* ChampionImage.swift */; };
 		6B47D22825023B5E00BFC659 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B47D22725023B5E00BFC659 /* Data.swift */; };
 		6B50CACA2557F0F500380732 /* RegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B50CAC92557F0F500380732 /* RegionView.swift */; };
+		6B59FE96257B540000D89D89 /* ShapeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59FE95257B540000D89D89 /* ShapeStore.swift */; };
 		6B6E726D256FC0D1003F47D7 /* ShapeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E726C256FC0D1003F47D7 /* ShapeCheck.swift */; };
 		6BBA75BF255BA80600E1BAC0 /* BioStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBA75BE255BA80600E1BAC0 /* BioStory.swift */; };
 		6BD00870254E942800752831 /* ChampionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0086E254E942800752831 /* ChampionDetail.swift */; };
@@ -41,7 +42,6 @@
 		6BF8DCBD25723BC50031C03B /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF8DCBC25723BC50031C03B /* Favorite.swift */; };
 		6BF8DCC4257240110031C03B /* favorite.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BF8DCC3257240100031C03B /* favorite.json */; };
 		6BF8DCE025726F3E0031C03B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF8DCDF25726F3E0031C03B /* ViewController.swift */; };
-		6BF8DCE52573E90E0031C03B /* ChampionQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF8DCE42573E90D0031C03B /* ChampionQueue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +60,7 @@
 		6B47D22525023AE000BFC659 /* ChampionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionImage.swift; sourceTree = "<group>"; };
 		6B47D22725023B5E00BFC659 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		6B50CAC92557F0F500380732 /* RegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionView.swift; sourceTree = "<group>"; };
+		6B59FE95257B540000D89D89 /* ShapeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeStore.swift; sourceTree = "<group>"; };
 		6B6E726C256FC0D1003F47D7 /* ShapeCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeCheck.swift; sourceTree = "<group>"; };
 		6BBA75BE255BA80600E1BAC0 /* BioStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioStory.swift; sourceTree = "<group>"; };
 		6BD0086E254E942800752831 /* ChampionDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionDetail.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		6BF8DCBC25723BC50031C03B /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		6BF8DCC3257240100031C03B /* favorite.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = favorite.json; path = 000_trial/favorite.json; sourceTree = SOURCE_ROOT; };
 		6BF8DCDF25726F3E0031C03B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6BF8DCE42573E90D0031C03B /* ChampionQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionQueue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,11 +164,11 @@
 			isa = PBXGroup;
 			children = (
 				6B6E726C256FC0D1003F47D7 /* ShapeCheck.swift */,
+				6B59FE95257B540000D89D89 /* ShapeStore.swift */,
 				6BED3DFC254441F4007F241A /* RegionRow.swift */,
 				6BD0087A254E956F00752831 /* RegionCell.swift */,
 				6BED3E0325444325007F241A /* RegionImage.swift */,
 				6B50CAC92557F0F500380732 /* RegionView.swift */,
-				6BF8DCE42573E90D0031C03B /* ChampionQueue.swift */,
 				6B47D2212502390500BFC659 /* ChampionRow.swift */,
 				6BD00876254E954200752831 /* ChampionCell.swift */,
 				6B47D22525023AE000BFC659 /* ChampionImage.swift */,
@@ -288,10 +288,10 @@
 				6BF8DCBD25723BC50031C03B /* Favorite.swift in Sources */,
 				6B47D2222502390500BFC659 /* ChampionRow.swift in Sources */,
 				6BD0087B254E956F00752831 /* RegionCell.swift in Sources */,
-				6BF8DCE52573E90E0031C03B /* ChampionQueue.swift in Sources */,
 				6B47D2172500E60900BFC659 /* SearchView.swift in Sources */,
 				6BD00877254E954200752831 /* ChampionCell.swift in Sources */,
 				6B47D22825023B5E00BFC659 /* Data.swift in Sources */,
+				6B59FE96257B540000D89D89 /* ShapeStore.swift in Sources */,
 				6BF8DCE025726F3E0031C03B /* ViewController.swift in Sources */,
 				6BD00870254E942800752831 /* ChampionDetail.swift in Sources */,
 				6B47D1FF2500D6EF00BFC659 /* ContentView.swift in Sources */,
@@ -424,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"LoL bio reader/Preview Content\"";
 				DEVELOPMENT_TEAM = 86L54WAP3G;
 				ENABLE_PREVIEWS = YES;
@@ -435,7 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "OWAJHIN.LoL-bio-reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"LoL bio reader/Preview Content\"";
 				DEVELOPMENT_TEAM = 86L54WAP3G;
 				ENABLE_PREVIEWS = YES;
@@ -455,7 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "OWAJHIN.LoL-bio-reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
